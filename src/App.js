@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Routes from "./components/Routes";
+import PrivateRoutes from "./components/PrivateRoutes";
 function App() {
-  const [darktheme, setdarktheme] = useState(true);
+  const [darktheme, setdarktheme] = useState(false);
 
   return (
     <div className={darktheme ? "dark" : " "}>
       <div className="bg-gray-100 dark:bg-gray-900 dark:text-gray-200 min-h-screen">
         <Navbar darkTheme={darktheme} setDarkTheme={setdarktheme} />
-        <Routes />
+        <PrivateRoutes />
         <Footer />
       </div>
     </div>
